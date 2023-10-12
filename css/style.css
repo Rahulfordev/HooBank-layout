@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* ------- Variables --------- */
+
+/***** Color variables *****/
+:root {
+  --color-primary: #00040f;
+  --color-secondary: #1d1d1d;
+  --color-white: #fff;
+  --color-gradient: linear-gradient(
+    158deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+}
+
+/***** Font variable *****/
+
+:root {
+  --font-family-poppins: "Poppins", sans-serif;
+}
+
+/***** Font size variable *****/
+:root {
+  --font-14px: 14px;
+  --font-16px: 16px;
+  --font-18px: 18px;
+  --font-24px: 24px;
+  --font-32px: 32px;
+  --font-48px: 48px;
+}
+
+/***** Font weight *****/
+:root {
+  --font-bold: 700;
+  --font-medium-bold: 600;
+  --font-medium: 500;
+  --font-regular: 400;
+}
+
+/***** Width variable *****/
+:root {
+  --body-max-width: 120rem;
+}
+
+/* ------ Reset CSS ------ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0px;
+  padding: 0px;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+body {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  min-height: 100vh;
+  font-family: var(--font-family-poppins);
+}
+
+header,
+main,
+footer {
+  max-width: var(--body-max-width);
+  margin-inline: auto;
+}
+
+.container {
+  max-width: 105rem;
+  margin-inline: auto;
+  padding: 0 2.5rem;
+}
+
+/* ========= nav bar ========= */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  padding: 36px 0;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 5px;
+  letter-spacing: 0.5px;
+}
+
+.nav-logo h3 span {
+  color: #5ce1e6;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-links li a {
+  font-size: 19px;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    color: #5ce1e6;
+  }
+}
+
+/* ======== hero section ======== */
+
+.hero-section {
+  padding-top: 55px;
+}
+
+.hero-text {
+  align-self: center;
+  flex: 1;
+}
+
+.hero-discount {
+  max-width: 408px;
+  border-radius: 10px;
+  background: linear-gradient(125deg, #272727 0%, #11101d 100%);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.discount span {
+  color: var(--color-white);
+}
+
+.discount p {
+  padding-left: 13px;
+}
+
+.hero-heading-1,
+.hero-heading-2 {
+  font-size: 72px;
+  font-weight: 600;
+}
+
+.hero-heading-1 span {
+  background: radial-gradient(
+    64.33% 64.33% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text > p {
+  margin-top: 3rem;
+  line-height: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  max-width: 30rem;
+  font-weight: 400;
+}
+
+.hero-circle {
+  border-radius: 50%;
+  border: 3px solid #33bbcf;
+  text-transform: capitalize;
+  height: fit-content;
+  width: fit-content;
+  padding: 2rem 1.7rem;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  font-weight: var(--font-SemiBold);
+  background: var(--color-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 2rem 0.6rem #00f7ffb2;
+    scale: 1.02;
+  }
+}
+
+.hero-circle p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+/* ======== hero section ======== */
+.counter-section {
+  margin: 2rem 0;
+}
+
+.hero-bottom__counter {
+  text-align: center;
+}
+
+.hero-bottom__counter > h2 {
+  font-size: 44px;
+  font-weight: 600;
+}
+
+.hero-bottom__counter > span {
+  font-size: 24px;
+  background: var(--color-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
